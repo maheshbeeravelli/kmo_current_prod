@@ -1,0 +1,10 @@
+.gradient{
+  background: #404040; /* Old browsers */
+  background: -moz-linear-gradient(left, #404040 0%, #323232 16%, #202020 33%, #101010 50%, #202020 67%, #323232 84%, #404040 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#404040), color-stop(16%,#323232), color-stop(33%,#202020), color-stop(50%,#101010), color-stop(67%,#202020), color-stop(84%,#323232), color-stop(100%,#404040)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #404040 0%,#323232 16%,#202020 33%,#101010 50%,#202020 67%,#323232 84%,#404040 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #404040 0%,#323232 16%,#202020 33%,#101010 50%,#202020 67%,#323232 84%,#404040 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #404040 0%,#323232 16%,#202020 33%,#101010 50%,#202020 67%,#323232 84%,#404040 100%); /* IE10+ */
+  background: linear-gradient(to right, #404040 0%,#323232 16%,#202020 33%,#101010 50%,#202020 67%,#323232 84%,#404040 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#404040', endColorstr='#404040',GradientType=1 ); /* IE6-9 */
+}

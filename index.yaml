@@ -1,0 +1,45 @@
+indexes:
+
+- kind: Offers
+  properties:
+  - name: store
+  - name: posted_on
+    direction: desc
+    
+- kind: Offers
+  properties:
+  - name: offer_type
+  - name: store
+  - name: posted_on
+    direction: desc
+
+- kind: Offers
+  properties:
+  - name: editors_pick
+  - name: enabled
+  - name: posted_on
+    direction: desc
+  - name: expiry
+    direction: desc
+  - name: store
+    direction: desc
+
+- kind: Offers
+  properties:
+  - name: enabled
+  - name: store
+  - name: posted_on
+    direction: desc
+    
+- kind: Offers
+  properties:
+  - name: enabled
+  - name: clicks
+    direction: desc
+    
+- kind: Offers
+  properties:
+  - name: enabled
+  - name: posted_on
+    direction: desc
+    

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="A best place in India for the offers, deals and Coupons across the mega e-commerce websites like flipkart, amazon, snapdeal etc.">
+  <meta content="coupons, flipkart coupons, amazon coupons, snapdeal coupons,flipkart deals, amazon deals, snapdeal deals,flipkart offers, amazon offers, snapdeal offers, know your offers flipkart, know your offers amazon, know your offers snapdeal, know your offers" name="keywords">
+	<title>Know The Latest Offers from most leading e-commerce websites</title>
+	
+	<meta name="viewport" content="width=device-width">
+	<!--[if lt IE 9]>
+      <SCRIPT src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></SCRIPT>
+      <SCRIPT src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></SCRIPT>
+  <![endif]-->
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+ 
+	<script src="static/js/main.js"></script>
+	<!-- css -->
+	<!--<link rel="stylesheet" href="static/css/bootstrap.css">-->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="static/css/main.css">
+	<link rel="stylesheet" href="static/css/responsive.css" media="screen and (max-width: 900px)">
+	<link rel="stylesheet" href="static/css/mhsstyles.css">
+	
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top visible-xs" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Know Your Offers</a>
+        </div>
+        <div style="height: 1px;" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Top Offers</a></li>
+            <li><a href="#contact">Latest Offers</a></li>
+            <li><a href="#contact">Stores</a></li>
+            <li><a href="#contact">Categories</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <form class="navbar-form navbar-right" role="form">
+              <div class="input-group">
+                  <input class="form-control " placeholder="Search for stores ( amazon,flipkart,snapdeal,eBay etc..) and products( mobiles,laptops etc..)" type="text">
+                  <span class="input-group-btn">
+                      <button type="submit" class="btn btn-warning">Search</button>
+                  </span>
+              </div>
+            </form>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	<!-- header -->
+	<div class="body-wrap">
+	<div class="container">
+		<div class="header-left" margin-right="-100px"><h1 >Know Your Offers</h1></div>
+		<div class="header-right">
+  		<form class="form-search">
+            <div class="input-group">
+                <input class="form-control " placeholder="Search for stores ( amazon,flipkart,snapdeal,eBay etc..) and products( mobiles,laptops etc..)" type="text">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-warning">Search</button>
+                </span>
+            </div>
+        </form>
+  	</div>
+	</div><!--/header-->
+	
+	<!-- nav -->
+	<div class="custom_nav hidden-xs">
+	  <div class="container">
+	    <div class="row">
+    		<ul class="">
+    			<li class="col-sm-2 nopadding"><a href="/">Home</a></li>
+    			<li class="col-sm-2 nopadding"><a href="#">Top Offers</a></li>
+    			<li class="col-sm-2 nopadding"><a href="#">Categories</a></li>
+    			<li class="col-sm-2 nopadding"><a href="#">Stores</a></li>
+    			<li class="col-sm-2 nopadding"><a href="#">Latest Offers</a></li>
+    			<li class="col-sm-2 nopadding"><a> Contact Us</a></li>
+    		</ul>
+  		</div>
+	  </div>
+  </div><!--/nav-->
+	
+	<!-- body-content -->
+	<div class="body-content">
+	<div class="container">
+		<!-- thirds -->
+		<div class="row">
+			<div class="col-md-8"><!-- Offers Body -->
+			{% for offer in offers %}
+  			<div class="item col-md-6">
+  			   <div class="item-inner">
+    			   <div class="item-header">
+    			   {%for store in stores%}
+    			   <!--{{store.store}}-->
+    			   {% if store.store == offer.store%}
+    			   	<img src="/view_photo/{{store.blob_key.key}}" alt="A bird on a fence" />
+    			   {% endif %}
+    			   {% endfor %}
+    			   </div>
+  				  <div class="item-title"><h4>{{offer.title}}</h4></div>
+  				  <p>{{offer.description}}</p>
+    				<div class="item-footer clearfix">
+    					<div class="item-left">
+    						<span>Expires:</span> <span class="expires-on">{{offer.expiry}}</span>
+    					</div>
+    					<div class="item-right"> 
+    						<span>Posted:</span> <span class="posted_on">{{offer.posted_on}}</span>
+    					</div>
+    				</div>
+  			    <div class="item-button"> <a class="btn btn-info" data-key="{{offer.key}}" data-link="{{offer.aff_link}}" data-code="{{offer.coupon_code}}">View {{offer.offer_type}} &gt;&gt;</a> </div>
+  			   </div>
+  			</div>
+  			{% endfor%}
+  		</div>	<!--End of Offers Body -->
+			
+			<div class="col-md-4"> <!-- side bar nav -->
+			 <div class="list-group">
+		          <ul class="nav nav-sidebar">
+		            <li class="list-group-item-info sidebar-header">Top Stores</li>
+		            {%for store in stores%}
+		            <li><a href="/store?store={{store.store}}">
+  		            <div class="widget-item">
+      			   	      <img src="/view_photo/{{store.blob_key.key}}" alt="{{store.store}}" />
+      			      </div>
+      			      Deals  {{store.deals_count}}   : Coupons  {{store.coupons_count}}
+		            </a>
+		              
+		            </li>
+		            {% endfor %}
+		             <li><a target="_blank" href="http://www.flipkart.com?affid=maheshbee">
+  		            <div class="widget-item">
+      			   	      <img src="/view_photo/AMIfv97TcvMNwYYS-AXbMc-CUbsIUza9lLsuuX-z_IG0iG6NLxAmxdCY6wX1EpFIUHg6rK5RAJC04-ho0LeA0ejZWdEcPU3BDE9yFcLgnOF4xYvvkdlxR-fSG5VaK7KO8Jl-t-Y7n6LK2RqkKA9GwDDYr8nXHRySYw" alt="Amazon.in" />
+      			      </div>
+      			      Deals  21   : Coupons  0
+		            </a>
+		              
+		            </li>
+		            <li><a target="_blank" href="http://www.flipkart.com?affid=maheshbee"><img src="https://mimic-dot-knowoffers.appspot.com/view_photo/AMIfv96R2WTmf2v3XRoyPaPr8rzK2wNGdFRwmvlV4JHZEfB1WaSSI4atmagi-ZjjfZlT1mfuLirXkUd-8YjCZ8TwzsnyJxZspnrdX7MN-coa2UCVGLak7OL-Jm6ubeyL9-7cW-28sY6QKaSPj4xWPKO5iEmM-eOlfA" /></a></li>
+		            <li><a href="#">Export</a></li>
+		          </ul>
+		          <ul class="nav nav-sidebar">
+		            <li><a href="">Nav item</a></li>
+		            <li><a href="">Nav item again</a></li>
+		            <li><a href="">One more nav</a></li>
+		            <li><a href="">Another nav item</a></li>
+		            <li><a href="">More navigation</a></li>
+		          </ul>
+		          <ul class="nav nav-sidebar">
+		            <li><a href="">Nav item again</a></li>
+		            <li><a href="">One more nav</a></li>
+		            <li><a href="">Another nav item</a></li>
+          </ul>
+        </div><!--End of List Group -->
+		<!-- 	<div class="list-group">
+        <a class="list-group-item list-group-item-info sidebar-header">
+          Top Stores
+        </a>
+        <a href="#" class="list-group-item"><div><img src="static/images/flipkart-kuo.png"/></div><span href="http://www.google.com">Click</span></a>
+        <a href="#" class="list-group-item" >
+        	<div><img src="static/images/amazon-kuo.jpg"/></div>
+        	<div class="col-md-6"><img src="static/images/amazon-kuo.jpg"/></div>
+        </a>
+        <a href="#" class="list-group-item"><div><img src="static/images/snapdeal-kuo1.jpg"/></div></a>
+        <a href="#" class="list-group-item">Vestibulum at eros</a>
+      </div>-->
+				
+		
+  			  
+			</div><!-- end of side bar nav-->
+			
+		</div><!--/thirds-->
+		
+		<!-- two-columns -->
+		<div class="row">
+			
+			<!-- main -->
+			<div class="main mobile-collapse">
+				
+				<h2>Primary Content Section</h2>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+			</div><!--/main-->
+			
+			<!-- side -->
+			<div class="side mobile-collapse">
+				
+				<!-- info-box -->
+				<div class="info-box-a">
+					<h4>Important Content</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div><!--/info-box-->
+				
+				<!-- info-box -->
+				<div class="info-box-b hide-mobile">
+					<h4>Not Vital</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div><!--/info-box-->
+				
+				<!-- info-box -->
+				<div class="info-box-b hide-mobile">
+					<h4>Not Vital</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</div><!--/info-box-->
+				
+			</div><!--/side-->
+			
+		</div><!--/two-columns-->
+		
+	</div>
+ </div><!--/body-content-->
+	
+ <!--Modals -->
+  <div id="offer_modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><!-- removed  fade bs-example-modal-lg -->
+    <div class="modal-dialog"><!--Removed class  modal-lg -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Thank You for using our site !</h4>
+        </div>
+          <div class="modal-body">
+            <h4 id="modal-title"></h4>
+            <ol>How to avail:
+              <li>Copy the coupon code</li>
+              <li>Use the code in the link you will be redirected.</li>
+              <li>Place the Order</li>
+              <li>Enjoy the deal</li>
+            </ol>
+            <div style="text-align:center"><span id="coupon-code">NO CODE</span> </div>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+   </div>
+ 
+ 
+	<!-- footer -->
+	<div class="footer">
+   <div class="section-inner">
+  		
+  		<p>Footer text placed here.</p>
+  		
+  	</div>
+  </div><!--/footer-->
+ 
+</div> 
+ 
+</body>
+</html>

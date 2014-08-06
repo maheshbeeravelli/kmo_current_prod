@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="A best place in India for the offers, deals and Coupons across the mega e-commerce websites like flipkart, amazon, snapdeal etc.">
+  <meta content="coupons, flipkart coupons, amazon coupons, snapdeal coupons,flipkart deals, amazon deals, snapdeal deals,flipkart offers, amazon offers, snapdeal offers, know your offers flipkart, know your offers amazon, know your offers snapdeal, know your offers" name="keywords">
+  <meta name="google-site-verification" content="5iR9q41Qiwx3IutT38MTBUfyO5IScTQyxakuBkHc3-0">
+  <meta name="google-site-verification" content="knPk_v1lKCwEtClX5CY24JguaHC2BIm2v2GoPBe-kME" />
+  <meta name="google-site-verification" content="knPk_v1lKCwEtClX5CY24JguaHC2BIm2v2GoPBe-kME">
+	<title>Know Your Offers
+	</title>
+	<meta name="viewport" content="width=device-width">
+  <link rel="image_src" href="static/images/kyo-logo3.PNG" / >
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="static/js/main.js"></script>
+	<!--[if lt IE 9]>
+      <SCRIPT src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></SCRIPT>
+      <SCRIPT src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></SCRIPT>
+  <![endif]-->
+	<!-- css -->
+	<!--<link rel="stylesheet" href="static/css/bootstrap.css">-->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/main.css">
+	<link rel="stylesheet" href="static/css/responsive.css" media="screen and (max-width: 900px)">
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<div class="navbar navbar-inverse navbar-fixed-top visible-xs" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Know Your Offers</a>
+        </div>
+        <div style="height: 1px;" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" id="mobile-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/?order=popular">Top Offers</a></li>
+            <!--<li><a href="#contact">Latest Offers</a></li>-->
+            <li><a href="/store?list=all">Stores</a></li>
+            <!--<li><a href="#contact">Categories</a></li>-->
+            <li><a><span class="contactus" style="cursor:pointer">Contact Us</span></a></li>
+            <form class="navbar-form navbar-right" action="/search" method="get" role="form">
+              <div class="input-group">
+                  <input class="form-control" id="mobile-search" name="q" placeholder="Search for stores ( amazon,flipkart,snapdeal,eBay etc..) and products( mobiles,laptops etc..)" type="text">
+                  <span class="input-group-btn">
+                      <button type="submit" class="btn btn-warning">Search</button>
+                  </span>
+              </div>
+            </form>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	<!-- header -->
+	<div class="body-wrap">
+	<div class="container">
+	  <div class="row">
+    		<div class="col-md-4 site-title">
+    		<a href="/"><h1 class="hidden">Know Your Offers</h1>
+    		  <div id="logo"></div>
+    		</a>
+    		</div>
+    		<div class="col-md-8 search-div hidden-xs">
+      		<form class="form-search" action="/search" method="get">
+                <div class="input-group hidden-xs">
+                    <input class="form-control " name="q" placeholder="Search for stores ( amazon,flipkart,snapdeal,eBay etc..) and products( mobiles,laptops etc..)" type="text">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-warning">Search</button>
+                    </span>
+                </div>
+            </form>
+      	</div>
+  	</div><!-- /row -->
+	</div><!--/container-->
+	<!-- nav -->
+	<div class="custom_nav hidden-xs">
+	  <div class="container">
+	    <div class="row">
+    		<ul class="">
+    			<li class="active"><a href="/">Home</a></li>
+    			<li><a href="/?order=popular">Top Offers</a></li>
+    			<!--<li class="col-sm-2 nopadding"><a href="#">Categories</a></li>-->
+    			<li><a href="/store?list=all">Stores</a></li>
+    			<!--<li class="col-sm-2 nopadding"><a href="#">Latest Offers</a></li>-->
+    			<li><a> <span class="contactus" style="cursor:pointer">Contact Us</span></a></li>
+    		</ul>
+  		</div>
+	  </div>
+  </div><!--/nav-->
+	<!-- body-content -->
+	<div class="body-content">
+	<div class="container">
+		<!-- thirds -->
+		<div class="row" style="padding-bottom: 10px;">
+		  <div class="col-md-8 adc">
+    		<h4>{{offers_desc}}</h4>
+      </div>
+      <div class="col-md-4 social-media clearfix ">
+        <div class="kyo_twitter" class="hidden-xs" style="">
+      		<a href="https://twitter.com/KnowYourOffer" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow Us @twitter</a>
+        </div>
+        <div class="kyo_pinit">
+          <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.knowyouroffers.in&media=http%3A%2F%2Fwww.knowyouroffers.in%2Fstatic%2Fimages%2Fpage-logo.jpg&description=Your%20Best%20Offers%20and%20Coupons%20SIte" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" /></a>
+          <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+        </div>
+        <div class="fb-like hidden-xs" data-href="https://www.facebook.com/knowyouroffers" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        <div class="kyo_gplus">
+    		  <g:plusone size="medium" count= "true" href="http://www.knowyouroffers.in" ></g:plusone>
+    		</div>
+      </div>
+		</div>
+		<div class="row">
+			<div class="col-md-8"><!-- Offers Body -->
+      <div class="row">
+		  <div class="col-md-12 adc clearfix" style="padding-bottom:10px">
+    		<div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-info active">
+                <input type="radio" name="options" id="show_all"> All <span id="all_count"></span>
+              </label>
+              <label class="btn btn-info">
+                <input type="radio" name="options" id="show_deals"> Deals <span id="deals_count"></span>
+              </label>
+              <label class="btn btn-info">
+                <input type="radio" name="options" id="show_coupons"> Coupons <span id="coupons_count"></span>
+              </label>
+        </div>
+      </div>
+		</div>
+			{% for offer in offers %}
+  			<div class="item col-md-6" data-offer-type="{{offer.offer_type}}" >
+  			   <div class="item-inner" itemscope itemtype="http://schema.org/Offer">
+      			   <div class="item-header">
+      			   {%for store in stores%}
+      			   {% if store.store == offer.store%}
+      			   	<img src="/view_photo/{{store.blob_key.key()}}" alt="{{store.store}}" />
+      			   	<meta itemprop="seller" content="{{store.store}}" />
+      			   {% endif %}
+      			   {% endfor %}
+      			   </div>
+    				   <div class="item-title"><h4 itemprop="name">{{offer.title}}</h4></div>
+    				   <p itemprop="description">{{offer.description}}</p>
+      				 <div class="item-footer clearfix">
+      				  <meta itemprop="priceCurrency" content="INR" />
+      					<div class="item-left">
+      					
+      						<span>Expires:</span> <span class="expires-on" itemprop="availabilityEnds">
+      						{{offer.expiry}}
+      						</span>
+      					</div>
+      					<div class="item-right"> 
+      						<span>Posted:</span> <span class="posted_on">{{offer.posted_on}}</span>
+      					</div>
+      				 </div>
+    			     <div class="item-button"> <a class="btn btn-info" data-key="{{offer.key()}}" data-link="{{offer.aff_link}}" data-code="{{offer.coupon_code}}">View {{offer.offer_type}} &gt;&gt;</a> </div>
+    			     <meta itemprop="url" content="{{offer.aff_link}}" />
+  			   </div>
+  			</div>
+  			{% endfor%}
+  			<div class="col-md-12" style="text-align: center;">
+  		  <ul class="pagination">
+            {% if page_no!=1: %} 
+            {% if count_pages==1 or page_no==1: %}
+            <li><a href="{{link}}page={{1}}">&laquo;</a></li>
+            {% elif page_no==1: %}
+            <li><a href="#">&laquo;</a></li>
+            {% else: %}
+            <li><a href="{{link}}page={{page_no-1}}">&laquo;</a></li>
+            {% endif %}
+            {% else: %}
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            {% endif %}
+            
+            {% for i in range(count_pages): %}
+            {% if i==page_no-1: %}
+            <li class="active"><a href="#">{{i+1}}</a></li>
+            {% else: %}
+            <li><a href="{{link}}page={{i+1}}">{{i+1}}</a></li>
+            {% endif %}
+            {% endfor %}
+
+            {% if count_pages!=page_no: %}
+            {% if count_pages==1: %}
+            <li><a href="{{link}}page={{1}}">&raquo;</a></li>
+            {% else: %}
+            <li><a href="{{link}}page={{page_no+1}}">&raquo;</a></li>
+            {% endif %}
+            {% elif count_pages==page_no: %}
+            <li class="disabled"><a>&raquo;</a></li> 
+            {% endif %}
+        </ul>
+  		</div>
+  		</div>	<!--End of Offers Body -->
+  		
+			<div class="col-md-4"> <!-- side bar nav -->
+			 <div class="list-group">
+		          <ul class="nav nav-sidebar">
+		            <li class="list-group-item-info sidebar-header">Top Stores</li>
+		            {%for store in stores%}
+		            <li><a href="/store?store={{store.store}}">
+  		            <div class="widget-item">
+      			   	      <img src="/view_photo/{{store.blob_key.key()}}" alt="{{store.store}} Deals and Coupons" />
+      			      </div>
+      			      Deals  {{store.deals_count}}   : Coupons  {{store.coupons_count}}
+		            </a>
+		              
+		            </li>
+		            {% endfor %}
+		          </ul>
+        </div><!--End of List Group -->
+			</div><!-- end of side bar nav-->
+		</div><!--/thirds-->
+		<div class="row"><!-- side 2nd row -->
+		</div><!--/row-->
+	</div>
+ </div><!--/body-content-->
+ 
+ <!--Modals -->
+  <div id="offer_modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"><!-- removed  fade bs-example-modal-lg -->
+    <div class="modal-dialog"><!--Removed class  modal-lg -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Thank You for using our site !</h4>
+        </div>
+          <div class="modal-body">
+            <h4 id="modal-title"></h4>
+            <ol>How to avail:
+              <li>Copy the coupon code</li>
+              <li>Use the code in the link you will be redirected.</li>
+              <li>Place the Order</li>
+              <li>Enjoy the deal</li>
+            </ol>
+            <div style="text-align:center"><span id="coupon-code">NO CODE</span> </div>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+   </div>
+ <div id="contactus_modal" class="modal fade wrapword">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Contact Us</h4>
+              </div>
+              <div class="modal-body" background="#000">
+               <form id="contactus_form" role="form" method="post" action="/contactus"> 
+                <div class="form-group">
+                  <label for="data_title">Name:</label>
+                  <input id="contactus_name" name="contactus_name" class="form-control" placeholder="Please enter your name" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="data_title">Email:</label>
+                  <input id="contactus_email" name="contactus_email" class="form-control" placeholder="Please enter your email address" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="data_description"><span id="linkordesc">Description:</span></label>
+                  <textarea id="contactus_desc" name="contactus_desc" class="form-control" placeholder="Input what you want to know from us." type="textarea" rows="6" cols="20" name="data_description"></textarea>
+                </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="contactus_send" class="btn btn-default">Send</button> 
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	<!-- footer -->
+  	<div style="bottom: 0px; position: fixed; width: 100%;" class="footer hidden-xs">
+       <div class="container">
+          <div class="row">
+              <p>*All offers are manually updated and are working at the time post</p>
+          </div>
+      	</div>
+    </div><!-- /footer -->
+  </div><!--/bodywrap-->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=358070894297602";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>        
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+ </body>
+</html>
