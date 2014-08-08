@@ -1,4 +1,3 @@
-     
 #logo h1{
 	font-family: Palatino,serif;
   letter-spacing: 1px;
@@ -38,6 +37,43 @@
   padding: 8px 0px;
   box-shadow: 0px 0px 2px rgb(39, 38, 38);
 }
+
+.header-links {
+  transition: all 300ms linear 0s;
+  margin: -6px 0px 6px;
+  float: right;
+}
+
+/*Drop Down Custom caption-side: */
+a.clrWhite{
+  color: #eee;
+}
+.header-links:hover a.clrWhite{
+  color: #111;
+  text-decoration: none;
+}
+.dropdown{
+  padding: 0px 5px;
+}
+.dropdown:hover{
+ background-color: #FFF;
+ border-radius: 2px 2px 0 0;
+ color: #222;
+}
+.dropdown-menu {
+    margin-top: -3px;
+    margin-left: -1px;
+    display: none;
+    border-top: 0;
+    display: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu:hover + a{
+  color: #222;
+}
+
 H1 {
 	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
 }

@@ -1,5 +1,5 @@
-application: knowyouroffers
-version: codenvy
+application: knowmyoffers
+version: condenvytest
 runtime: python27
 threadsafe: true
 api_version: 1

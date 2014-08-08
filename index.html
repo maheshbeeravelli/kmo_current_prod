@@ -60,7 +60,7 @@
 </div><!-- nav bar inverse -->
     
 <div class="body-wrap">
-  <div id="header1">
+  <div id="header">
     <div class="container">
       <div class="row">
          <div class="col-md-4 site-title">
@@ -74,16 +74,44 @@
              </div><!-- logo -->
            </a>
          </div><!-- site-title -->
-         <div class="col-md-8 search-div hidden-xs">
-            <form class="form-search" action="/search" method="get">
-                <div class="input-group hidden-xs">
-                    <input class="form-control " name="q" placeholder="Search for stores ( amazon,flipkart,snapdeal,eBay etc..) and products( mobiles,laptops etc..)" type="text">
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-warning">Search</button>
-                    </span>
+         <div class="col-md-8">
+        		<div class="row">
+        		  <div class="header-links">
+                <div class="dropdown">
+                   <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                  <a href="#" class="dropdown-toggle clrWhite" data-toggle="dropdown">Hi Mahesh ! 
+                    <script>
+                   FB.getLoginStatus(function (response) {
+                       if (response.status === 'connected') {
+                           console.log('Logged in.');
+                       }
+                       else {
+                           FB.login();
+                       }
+                   });</script><span class="caret"></span></a>
                 </div>
-            </form>
-         </div><!-- search-div -->
+
+              </div>
+        		</div>
+      		  <div class="row search-div hidden-xs">
+          		  <form class="form-search" action="/search" method="get">
+                    <div class="input-group hidden-xs">
+                        <input class="form-control " name="q" placeholder="Search for stores ( amazon,flipkart,snapdeal,eBay etc..) and products( mobiles,laptops etc..)" type="text">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-warning">Search</button>
+                        </span>
+                    </div>
+                </form>
+          	</div><!-- search div -->
+        	</div>
+        
        </div><!-- /row -->
     </div><!--/container-->
   </div><!-- header -->
